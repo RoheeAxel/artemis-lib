@@ -1,0 +1,12 @@
+make re
+
+if (($# == 0))
+then
+gcc playground/playground.c a_lib.a -g3 -o playground/playground
+fi
+
+if (($# == 1))
+then
+gcc $1 a_lib.a -g3 -o playground/playground
+fi
+./playground/playground
